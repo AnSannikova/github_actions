@@ -3,7 +3,7 @@ import styles from './modal.module.scss';
 import useMetrika from '../../hooks/useMetrika';
 export default function Modal() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const { ym } = useMetrika();
+	const { ym, gtag } = useMetrika();
 
 	useEffect(() => {
 		const handleEsc = (e: KeyboardEvent) => {
@@ -19,6 +19,9 @@ export default function Modal() {
 	const handleButton = () => {
 		setIsOpen(true);
 		ym('reachGoal', 'click');
+		gtag('event', 'click', {
+			event_name: 'click',
+		});
 	};
 
 	return (

@@ -9,7 +9,7 @@ const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
 root.render(
 	<StrictMode>
-		<Analytic.Provider value={{ yandexId: 96959361, googleId: 'G-ZXWBHB1NR0' }}>
+		<Analytic.Provider value={{ yandexId: 96959361, googleId: 'G-FM3JLTVGFE' }}>
 			<BrowserRouter
 				basename={process.env.PUBLIC_PATH ? process.env.PUBLIC_PATH : '/'}>
 				<App />
